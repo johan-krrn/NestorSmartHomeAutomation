@@ -1,6 +1,6 @@
 name: "WS to REST Bridge"
 slug: ws_rest_bridge
-version: "1.0.2"
+version: "1.0.3"
 description: "WebSocket to Home Assistant REST API bridge"
 url: "https://github.com/johan-krrn/NestorSmartHomeAutomation"
 arch:

@@ -14,7 +14,7 @@ const ALLOWED_METHODS = (() => {
   }
 })();
 
-const HA_BASE_URL = "http://supervisor/core";
+const HA_BASE_URL = "http://homeassistant:8123";
 
 function log(level, msg, meta) {
   const ts = new Date().toISOString();
