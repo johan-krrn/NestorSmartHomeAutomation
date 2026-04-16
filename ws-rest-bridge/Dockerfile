@@ -1,6 +1,8 @@
 ARG BUILD_FROM=node:18-alpine
 FROM ${BUILD_FROM}
 
+RUN apk add --no-cache jq
+
 WORKDIR /app
 
 COPY package.json ./

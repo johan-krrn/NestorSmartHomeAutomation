@@ -3,9 +3,9 @@ set -e
 
 CONFIG_PATH=/data/options.json
 
-export HA_TOKEN=$(jq -r '.ha_token' "$CONFIG_PATH")
-export WS_PORT=$(jq -r '.ws_port' "$CONFIG_PATH")
-export ALLOWED_METHODS=$(jq -c '.allowed_methods' "$CONFIG_PATH")
+export HA_TOKEN=$(node -p "require('${CONFIG_PATH}').ha_token")
+export WS_PORT=$(node -p "require('${CONFIG_PATH}').ws_port")
+export ALLOWED_METHODS=$(node -p "JSON.stringify(require('${CONFIG_PATH}').allowed_methods)")
 
 echo "[ws-bridge] Starting WS to REST Bridge on port ${WS_PORT}..."
 
